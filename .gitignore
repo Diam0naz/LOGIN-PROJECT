@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Students Register</h1>
+    <!-- <img src="https://svs.gsfc.nasa.gov/vis/a030000/a030800/a030877/frames/5760x3240_16x9_01p/BlackMarble_2016_928m_russia_west_labeled.png">
+    <img src="https://svs.gsfc.nasa.gov/vis/a030000/a030800/a030877/frames/5760x3240_16x9_01p/BlackMarble_2016_928m_india_labeled.png">
+    <img src="https://svs.gsfc.nasa.gov/vis/a030000/a030800/a030877/frames/5760x3240_16x9_01p/BlackMarble_2016_928m_s_america_s_labeled.png"> -->
+    
+    <a href="https://blockfuselabs.com">Click me</a>
+
+    <div id="result"></div>
+
+    <div id="students">
+        
+    </div>
+    
+    <form>
+        <div id="fullname">
+            <label>Name</label>
+            <input type="text" name="fullname">
+        </div>
+        <div id="email">
+            <label>Email</label>
+            <input type="email" name="email">
+        </div>
+        <div id="password">
+            <label>Password</label>
+            <input type="password" name="password">
+            <button id="showPass">Show Password</button>
+        </div>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+    
+    <script src="external.js" defer></script>
+    <script>
+        // let script = document.createElement('script')
+        // script.src = 'external.js';
+        // document.body.appendChild(script)
+        
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     let student = document.querySelector('.student');
+        //     console.log(`DOM loaded`)
+            
+        //     // document.addEventListener('click', () => {
+        //     //     alert('clicked');
+        //     // });
+        //     window.addEventListener('load', () => {
+                
+        //         console.log(`Page loaded fully`)
+        //         // img.style.display = "block"
+
+        //         console.log(`From load: ${document.kcData.name}`);
+        //     });
+
+        //     let img1 = document.querySelectorAll('img')[0]
+        //     img1.addEventListener('load', () => {
+        //         console.log("First image has loaded");
+        //     });
+
+        //     let img2 = document.querySelectorAll('img')[1]
+        //     img2.addEventListener('load', () => {
+        //         console.log("Second image has loaded");
+        //     });
+
+        //     let img = document.querySelectorAll('img')[2]
+        //     img.addEventListener('load', () => {
+        //         console.log("Third image has loaded");
+        //     });
+
+        //     console.log(`From DOMContentLoaded: ${document.kcData.name}`);
+        // });
+
+        window.addEventListener('beforeunload', () => {
+            // alert("You are leaving this page")
+            console.log("You are leaving this page")
+            // submitTest();
+        });
+
+        let link = document.querySelector('a');
+        link.addEventListener('click', click);
+
+        function click(e) {
+            e.preventDefault();
+            console.log(e.target)
+            console.log('Link clicked')
+            console.log('Something')
+        }
+
+        let btn = document.querySelector('input[type=submit]');
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            let spans = document.querySelectorAll('span');
+            if(spans.length > 0) {
+                spans.forEach((span) => {
+                    span.remove();
+                });
+            }
+
+            let isValid = true;
+            let fullname = document.querySelector('input[type=text]').value
+            let email = document.querySelector('input[type=email]').value
+            let password = document.querySelector('input[type=password]').value
+
+            if(!fullname || fullname == "") {
+                isValid = false;
+                let span = document.createElement('span');
+                span.style.color = '#ff0000';
+                span.innerText = 'Fullname cannot be empty'
+                document.getElementById('fullname').appendChild(span);
+            }
+
+            if(!email || email == "") {
+                isValid = false;
+                let span = document.createElement('span');
+                span.style.color = '#ff0000';
+                span.innerText = 'Email cannot be empty'
+                document.getElementById('email').appendChild(span);
+            }
+
+            if(!password || password == "") {
+                isValid = false;
+                let span = document.createElement('span');
+                span.style.color = '#ff0000';
+                span.innerText = 'Password cannot be empty'
+                document.getElementById('password').appendChild(span);
+            }else {
+                if(password.length < 8) {
+                    isValid = false
+                    let span = document.createElement('span');
+                    span.style.color = '#ff0000';
+                    span.innerText = 'Password cannot be less than 8'
+                    document.getElementById('password').appendChild(span);
+                }
+            }
+
+            if(isValid){
+                document.getElementById('result').innerHTML = `<h2>Submitted details</h2>
+                <ul><li>Name: ${fullname}</li><li>Email: ${email}</li><li>Password: ${password}</li></ul>`;
+                
+                document.querySelector('form').reset();
+
+            }else{
+                document.getElementById('result').innerHTML = `<span style='color:#ff0000'>Please fill all fields</span>`
+            }
+        });
+        
+        let showPass = document.querySelector("#showPass");
+        showPass.addEventListener('click', (e) => {
+            e.preventDefault();
+            let password = document.querySelector('input[name=password]')
+            if(password.type == "password") {
+                showPass.innerText = 'Hide Password'
+                password.type = 'text'
+            }else{
+                showPass.innerText = 'Show Password'
+                password.type = 'password'
+            }
+        });
+
+        // myPassword@
+
+        /**
+         * =================
+         *      EVENTS
+         * =================
+         * DOMContentLoaded: listens for when the DOM is loaded
+         * load: this fires when the page loads fully
+         * beforeunload: this fires when leaving/closing the tab/window/refreshing/navigating to another page
+         * click: this fires when you click on the element or document
+         * blur
+         * focus
+         * keyup
+         * keydown
+         * change
+         * hover
+         **/
+
+        /**
+         * =================
+         *    DOM Methods
+         * =================
+         * createElement
+         * {parent/element}.appendChild
+         * querySelector
+         * querySelectorAll
+         * getElementById
+         * getElementsByClassName
+         * getElementsByTagName
+         * getElementsByName
+         * {element}.setAttribute
+         * {element}.getAttribute
+         * {element}.classList.add
+         * {element}.classList.remove
+         * {element}.classList.toggle
+         * {element}.classList.replace
+         * {parent}.removeChild
+         * {element}.remove
+         * {element}.style.{cssProperty}
+         * {child}.parentElement
+         * {child}.nextElementSibling
+         * 
+         * Date();
+         * 
+        **/
+    </script>
+    
+</body>
+
+</html>
