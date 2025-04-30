@@ -213,3 +213,138 @@
 </body>
 
 </html>
+
+    <!-- Main container div -->
+    <div id="container" class="w-[500px] h-[350px] absolute left-[50%] translate-x-[-50%] top-5 grid grid-cols-6 gap-y-4 rounded-2xl" >
+        <!-- First column -->
+        <div class="col-start-1 col-end-4 p-3 bg-gradient-to-tr from-red-500 to bg-fuchsia-400 rounded-tl-xl rounded-bl-xl ">
+        </div>
+        <!-- Seond column -->
+        <div class="col-start-4 col-span-3 bg bg-gradient-to-br from-fuchsia-400 to bg-red-500 rounded-tr-xl rounded-br-xl p-5 flex flex-col justify-center gap-4">
+            <!-- Form Start -->
+          <form action="" class=" flex flex-col gap-2 ">
+            <!-- Name div -->
+                <div class="flex flex-col gap-1 justify-center">
+                    <label for="name" class="font-bold text-fuchsia-800 text-[1.1rem]">Name</label>
+                    <input type="text" name="name" id="name" class="w-56 h-8 outline-none bg-gradient-to-tr from-fuchsia-400 to-red-300 text-fuchsia-200 rounded-lg p-3">
+                </div>
+                <!-- Email div -->
+                <div class="flex flex-col gap-1 justify-center">
+                    <label for="email" class="font-bold text-fuchsia-800 text-[1.1rem]">Email</label>
+                    <input type="email" name="email" id="email" class="w-56 h-8 outline-none bg-gradient-to-tr from-fuchsia-400 to-red-300 text-fuchsia-200 rounded-lg p-3">  
+                </div>
+                <!-- DOB div -->
+                <div class="flex flex-col gap-1 justify-center">
+                    <label for="dateofBirth" class="font-bold text-fuchsia-800 text-[1.1rem]">Date of Birth</label>
+                    <input type="date" id="dOb" class="w-56 h-8 outline-none bg-gradient-to-tr from-fuchsia-400 to-red-300 text-fuchsia-200 rounded-lg p-3">
+                </div>
+                <!-- Password div -->
+                <div class="flex flex-col gap-1 justify-center">
+                    <label for="password" class="font-bold text-fuchsia-800 text-[1.1rem]">Password</label>
+                    <div class="flex gap-2">
+                        <!-- Actual input for password -->
+                        <input type="password" name="" id="password" class="w-28 h-8 outline-none bg-gradient-to-tr from-fuchsia-400 to-red-300 text-fuchsia-200 rounded-lg p-3">
+                        <!-- Toggle for change show and hide -->
+                        <button class="w-16 h-8 outline-none bg-gradient-to-tr from-fuchsia-400 to-red-300 text-fuchsia-200 rounded-lg text-[0.5rem] text-center">Show password</button>
+                    </div>
+                </div>
+                <!-- Submit and Reset buttons div -->
+                <div class="flex gap-1 font-bold text-fuchsia-800 text-[1.1rem]">
+                    <input type="submit" id="submit" class="w-32 border-[1px] border-solid border-red-600 rounded-xl bg-gradient-to-r from-pink-400 to-red-300">
+                    <input type="reset" class="w-32 border-[1px] border-solid border-red-600 rounded-xl bg-gradient-to-r from-pink-400 to-red-300">
+                </div>
+                
+          </form>
+        </div>
+    </div>
+
+    <!-- Decor objects -->
+    <!-- first grid div -->
+    <div class="col-start-1 col-end-2 row-start-1 row-end-2 relative">
+      <!-- Spinning Wheel -->
+      <div class="absolute bottom-4 left-4">
+        <div class="w-14 h-1 bg-red-500 rotate-90">
+          <div class="w-14 h-1 bg-fuchsia-500 rotate-90">
+            <div class="w-14 h-1 bg-blue-500 rotate-45">
+              <div class="w-14 h-1 bg-pink-500 rotate-90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="size-40 rounded-full bg-gradient-to-tr from-blue-700 to bg-fuchsia-400 ml-8">
+        <div
+          class="size-20 bg-gradient-to-b from bg-fuchsia-500 rounded-full translate-y-2 translate-x-12"></div>
+      </div>
+    </div>
+    <!-- Second grid div -->
+    <div class="col-start-2 col-end-3 row-start-1 row-end-2 relative">
+      <!-- Spinning Wheel -->
+      <div class="absolute bottom-4 left-4">
+        <div class="w-14 h-1 bg-red-500 rotate-90">
+          <div class="w-14 h-1 bg-fuchsia-500 rotate-90">
+            <div class="w-14 h-1 bg-blue-500 rotate-45">
+              <div class="w-14 h-1 bg-pink-500 rotate-90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="size-40 rounded-full bg-gradient-to-tr from-blue-700 to bg-fuchsia-400 ml-8">
+        <div
+          class="size-20 bg-gradient-to-b from bg-fuchsia-500 rounded-full translate-y-2 translate-x-12"></div>
+      </div>
+    </div>
+    <!-- Third grid div -->
+    <div class="col-start-1 col-end-2 row-start-2 row-end-3 relative">
+      <!-- Spinning Wheel -->
+      <div class="absolute bottom-4 left-4">
+        <div class="w-14 h-1 bg-red-500 rotate-90">
+          <div class="w-14 h-1 bg-fuchsia-500 rotate-90">
+            <div class="w-14 h-1 bg-blue-500 rotate-45">
+              <div class="w-14 h-1 bg-pink-500 rotate-90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="size-40 rounded-full bg-gradient-to-tr from-blue-700 to bg-fuchsia-400 ml-8">
+        <div
+          class="size-20 bg-gradient-to-b from bg-fuchsia-500 rounded-full translate-y-2 translate-x-12"></div>
+      </div>
+    </div>
+    <!-- Fourth grid div -->
+    <div class="col-start-2 col-end-3 row-start-2 row-end-3 relative">
+      <!-- Spinning Wheel -->
+      <div class="absolute bottom-4 left-4">
+        <div class="w-14 h-1 bg-red-500 rotate-90">
+          <div class="w-14 h-1 bg-fuchsia-500 rotate-90">
+            <div class="w-14 h-1 bg-blue-500 rotate-45">
+              <div class="w-14 h-1 bg-pink-500 rotate-90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="size-40 rounded-full bg-gradient-to-tr from-blue-700 to bg-fuchsia-400 ml-8">
+        <div
+          class="size-20 bg-gradient-to-b from bg-fuchsia-500 rounded-full translate-y-2 translate-x-12"></div>
+      </div>
+    </div>
+
+    <!-- Spinning Wheel -->
+    <!-- <div class="absolute bottom-4 left-4">
+
+        <div class="w-14 h-1 bg-red-500 rotate-90">
+            <div class="w-14 h-1 bg-fuchsia-500 rotate-90">
+                <div class="w-14 h-1 bg-blue-500 rotate-45">
+                    <div class="w-14 h-1 bg-pink-500 rotate-90"></div>
+                </div>
+            </div>
+        </div>
+
+    </div> -->

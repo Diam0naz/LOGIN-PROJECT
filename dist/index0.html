@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REGISTER-UI</title>
+    <title>LOGIN-UI</title>
     <link rel="stylesheet" href="/dist/styles.css" />
   </head>
   <body
@@ -73,52 +73,41 @@
 
     <!-- Centered Registration Form -->
     <div
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[440px]  bg-gradient-to-br from-indigo-900 via-gray-900 to-purple-900 rounded-2xl shadow-2xl z-50 p-6 grid grid-cols-6 gap-y-4">
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[440px] bg-gradient-to-br from-indigo-900 via-gray-900 to-purple-900 rounded-2xl shadow-2xl z-50 p-6 grid grid-cols-6 gap-y-4">
       <!-- Visual Side -->
       <div
         class="col-span-3 bg-gradient-to-tr from-purple-700 to-fuchsia-600 rounded-l-2xl flex items-center justify-center p-6">
-        <h2
-          class="text-white text-[1.8rem] font-bold font-playWriteCuba w-full">
-          Join Us!
+        <h2 class="text-white text-3xl font-bold font-playWriteCuba">
+          Welcome Back!
         </h2>
       </div>
 
       <!-- Form Side -->
       <div class="col-span-3 p-3 flex flex-col gap-3 font-raleWay">
         <form class="text-gray-200 space-y-2">
-          <!-- Name div -->
-          <div id="name" class="font-raleWay">
+          <div>
             <label for="name" class="block font-semibold text-sm">Name</label>
             <input
+              id="name"
               type="text"
               class="w-full px-2 py-1.5 bg-gray-800 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
           </div>
-          <!-- Email div -->
-          <div id="email" class="font-raleWay">
+          <div>
             <label for="email" class="block font-semibold text-sm">Email</label>
             <input
+              id="email"
               type="email"
               class="w-full px-2 py-1.5 bg-gray-800 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
           </div>
-          <!-- Date of Birth -->
-          <div id="dOb" class="font-raleWay">
-            <label for="dOb" class="block font-semibold text-sm"
-              >Date of Birth</label
-            >
-            <input
-              type="date"
-              class="w-full px-2 py-1.5 bg-gray-800 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
-          </div>
-          <!-- Password -->
-          <div id="password">
+          <div>
             <label for="password" class="block font-semibold text-sm"
               >Password</label
             >
             <!-- Password and show password -->
             <div class="w-full flex gap-1 h-8">
               <input
-                name="password"
                 type="password"
+                id="password"
                 class="w-[60%] px-2 py-1.5 bg-gray-800 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
               <button
                 id="showPass"
@@ -127,28 +116,28 @@
               </button>
             </div>
           </div>
-          <div class="flex gap-3 mt-2 font-raleWay font-extralight">
+          <div class="flex gap-3 mt-2">
             <button
               type="submit"
-              class="w-full py-1 bg-gradient-to-br from-fuchsia-500 via-purple-800 to-pink-400 rounded-md text-sm hover:brightness-110 transition font-normal">
-              Sign Up
+              class="w-full py-1.5 bg-gradient-to-br from-fuchsia-500 via-purple-800 to-pink-400 rounded-md text-sm hover:brightness-110 transition">
+              Login
             </button>
             <button
               type="reset"
-              class="w-full py-1.5 bg-gradient-to-br from-indigo-900 via-gray-900 to-purple-950 rounded-md text-sm hover:brightness-110 transition font-normal">
+              class="w-full py-1.5 bg-gradient-to-br from-indigo-900 via-gray-900 to-purple-950 rounded-md text-sm hover:brightness-110 transition">
               Reset
             </button>
           </div>
         </form>
       </div>
     </div>
-    <script src="/dist/scripts.js"></script>
   </body>
 </html>
 
-<!-- Registrstion and login form
-    fullname email phonenumber dateofBirth
-    Validate all data
-    User must submit a valid email address
-    password mudt be greater than 7 and must consist of Lowercase, Uppercase, Number, symbol(optional)
-    date of birth -->
+<!-- LOGIN
+    =====
+    Hard-core the email and password
+    
+    1. validate all date
+    2. Check if the credentials are correct
+    3. If correct, show the user a successful message-->
