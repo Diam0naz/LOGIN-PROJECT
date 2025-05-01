@@ -57,6 +57,7 @@ btn.addEventListener("click", (e) => {
     span.style.fontSize = "10px";
     span.style.margin = "0px";
     span.style.padding = "0px";
+    span.style.fontWeight = "200";
     span.innerText = "Password cannot be empty";
     document.getElementById("password").appendChild(span);
     setTimeout(() => {
